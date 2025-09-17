@@ -149,8 +149,6 @@
 
 ---
 
-## 1.8 Pre-Demo Phase WP5
-
 ### Initial Development
 - Baseline DAEs tested on UK-DALE, REDD datasets.  
 - Limitations: poor generalization for rare/low-usage devices.  
