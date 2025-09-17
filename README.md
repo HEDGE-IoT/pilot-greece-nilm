@@ -1,13 +1,13 @@
 # Non-Intrusive Load Monitoring (NILM)
 
-## 1.1 General Information and Purpose
+## General Information and Purpose
 - **Service Name/Title:** `nilm`
 - **Description and purpose:** The NILM service disaggregates aggregate household energy consumption into device-level usage profiles without intrusive hardware or per-device meters. It applies advanced ML models (DAEs, clustering-based architectures, deep sequence models) to identify appliance usage patterns from whole-home smart meter data. Supports real-time energy disaggregation, flexibility estimation, incentive targeting, and user feedback.
 - **Owner/Contact Information:** ICCS
 
 ---
 
-## 1.2 Functional Requirements
+## Functional Requirements
 1. Ingest real-time household energy data from smart meters (e.g., Shelly 3EM).  
 2. Disaggregate data into device-level consumption (washing machine, fridge, dishwasher, etc.).  
 3. Support learning for multiple appliances via clustering strategies.  
@@ -21,7 +21,7 @@
 
 ---
 
-## 1.3 Non-Functional Requirements
+## Non-Functional Requirements
 - Latency < 5s per MTU.  
 - Minimum F1-score ≥ 0.8 on high-impact appliances.  
 - Maintain privacy: only aggregate signals processed.  
@@ -30,9 +30,9 @@
 
 ---
 
-## 1.4 Service Interfaces
+## Service Interfaces
 
-### 1.4.1 API Endpoints
+### API Endpoints
 
 #### Endpoint 1 — Train NILM Model
 - **URL:** `/nilm/train`  
@@ -104,12 +104,12 @@
 
 ---
 
-### 1.4.2 UI Mock-ups
+### UI Mock-ups
 *(Not applicable – backend service)*  
 
 ---
 
-## 1.5 Data Model
+## Data Model
 
 ### Inputs
 - Aggregate household consumption (1s–1min).  
@@ -129,7 +129,7 @@
 
 ---
 
-## 1.6 Integration and Dependencies
+## Integration and Dependencies
 
 ### Roles
 - **Aggregator:** Integrates metering, disaggregated consumption, forecasts → flexibility bids.  
@@ -142,7 +142,7 @@
 
 ---
 
-## 1.7 Security and Privacy
+## Security and Privacy
 - Encrypted channels (TLS/HTTPS, MQTT with certs).  
 - Anonymized datasets for training.  
 - No PII stored or shared.  
